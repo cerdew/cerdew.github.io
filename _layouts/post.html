@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post hentry" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class='post-body'><h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
 
     <p class="post-meta">
       <time class="published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -23,6 +23,7 @@ layout: default
 
  
     {{ content }}
+</div>
   
 <!-- Related -->
 {% assign related_posts = site.posts | where_exp: "post", "post != page" %}
