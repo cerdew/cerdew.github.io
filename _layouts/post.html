@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<article class="post hentry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    <p class="post-meta">
+      <time class="published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author author" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+
+  
+{% if page.image %}
+<div class="separator" style="clear: both; text-align: center;">
+          <img class="fullwidth" src="{{ page.image }}" alt="Gambar {{ post.title }}" width="480" />
+</div>
+        {% endif %}
+
+ 
+    {{ content }}
+  
+<!-- Related -->
+{% assign related_posts = site.posts | where_exp: "post", "post != page" %}
+{% assign shared_category_posts = "" | split: "" %}
+
+{% for category in page.categories %}
+  {% assign posts_in_category = related_posts | where_exp: "post", "post.categories contains category" %}
+  {% assign shared_category_posts = shared_category_posts | concat: posts_in_category %}
+{% endfor %}
+
+{% assign unique_related = shared_category_posts | uniq | slice: 0, 3 %}
+
+{% if unique_related.size > 0 %}
+  <h4>Related Posts</h4>
+  <ul class="related-posts">
+    {% for post in unique_related %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<!-- End Related -->
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  
+</article>
