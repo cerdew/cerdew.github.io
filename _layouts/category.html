@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class='latest-post-title'>
+<h2>Daftar {{ page.category }}</h2>
+</div>
+
+{% assign category_posts = site.categories[page.category] %}
+{% assign posts_sorted = category_posts | sort: 'date' | reverse %}
+{% for post in posts_sorted offset: paginator.per_page limit: paginator.per_page %}
+<article class="post">
+  <div class="label-line">
+    <span class="label-info-th"></span>
+  </div>
+
+  {% if post.image %}
+    <div class='img-thumbnail-wrap'>
+      <div class='img-thumbnail'><img class="post-thumbnail image" src="{{ post.image }}" alt="Thumbnail {{ post.title }}" /></div>
+    </div>
+  {% endif %}
+
+  <div class="post-content-wrapper">
+    <h2 class='post-title'>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+
+    <div class="post-snippet">
+      {{ post.excerpt | truncatewords: 20 }} <a href="{{ post.url }}" class="read-more-link">Read more »</a>
+    </div>
+
+    <div class='post-info info-1'>
+      <span class='author-info'>By Admin</span> - <span class='time-info'>{{ post.date | date: "%d %B %Y" }}</span>
+    </div>
+  </div>
+</article>
+{% endfor %}
+
+<p style="text-align:center">
+  {% include pagination.html %}
+</p>
