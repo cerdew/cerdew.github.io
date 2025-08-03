@@ -1,9 +1,10 @@
 title: ""
 email: ""
 description: ""
+author: "Tante Cerdew"
 
 baseurl: "" # jangan dikasih slash
-url: "https://cerdew.github.io"
+url: "https://cerdew.github.io/"
 
 permalink: "/:title.html"
 
