@@ -1,17 +1,25 @@
-<h4>Recent Posts</h4>
-  <ul class="recent-post-list">
-    {% for post in site.posts limit:5 %}
-      <li class="recent-post-item">
-        <a href="{{ post.url }}">
+<aside id='sidebar-wrapper'>
+<div class='sidebar section' id='sidebar'>
+<div class='widget PopularPosts' data-version='2' id='PopularPosts1'>
+<h2 class='title'>Populer</h2>
+<div class='widget-content'>
+<div class='popular-post'>
+{% for post in site.posts limit:5 %}
+<div class='popular-post-thumbnail'>
           {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb" />
+<a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}" /></a>
           {% endif %}
-          <div class="recent-text">
-            <strong>{{ post.title }}</strong><br />
-            <small>{{ post.date | date: "%d %B %Y" }}</small>
-          </div>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<div class='popular-post-info'>
+<div class='popular-post-title'>
+<a href="{{ post.url }}">{{ post.title }}</a>
+</div>
+<div class='byline'>{{ post.date | date: "%d %B %Y" }}</div>
+{% endfor %}
+</div>
+<!-- END RECENT POST -->
+
+</div>
+</aside>
+
+
 
