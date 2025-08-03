@@ -11,7 +11,7 @@ layout: default
 
 <div class="label-line">
   {% for category in post.categories %}
-    <a href="/category/{{ category | slugify }}/" class="label-info-th">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+    <span class="label-info-th"<a href="/category/{{ category | slugify }}/">{{ category }}</a></span>{% unless forloop.last %}, {% endunless %}
   {% endfor %}
 </div>
 
