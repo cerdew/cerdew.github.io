@@ -1,36 +1,26 @@
----
-layout: default
----
-
-<div class='latest-post-title'>
-<h2>Cerita Terbaru</h2>
-</div>
-
+<div id="page" class="home hfeed">
+  <ul class="post-list hentry">
     {% for post in paginator.posts %}
-      <article class="post">
-<div class="label-line">
-        <span class="label-info-th"></span></div>
+      <li class="post-item">
         {% if post.image %}
-          <div class='img-thumbnail-wrap'>
-<div class='img-thumbnail'><img class="post-thumbnail image" src="{{ post.image }}" alt="Thumbnail {{ post.title }}" /></div></div>
+          <img class="post-thumbnail image" src="{{ post.image }}" alt="Thumbnail {{ post.title }}" />
         {% endif %}
 
         <!-- Judul tetap di kanan -->
-        <div class="post-content-wrapper">
-                <h2 class='post-title'>
-            <a href="https://cerdew.github.io{{ post.url }}">{{ post.title }}</a>
+        <div class="post-title-wrapper">
+          <h2 class="post-title entry-title">
+            <a class="post-link url" href="https://kisahcandu.github.io{{ post.url }}">{{ post.title }}</a>
           </h2>
-        
+        </div>
 
         <!-- Snippet + tanggal pindah ke bawah gambar -->
-        <div class="post-snippet">
-          {{ post.excerpt | truncatewords: 20 }} <a href="{{ post.url }}" class="read-more-link">Read more »</a></div>
-          <div class='post-info info-1'>
-<span class='author-info'>By Admin</span> - <span class='time-info'>{{ post.date | date: "%d %B %Y" }}</span>
+        <div class="post-body">
+          <p class="entry-summary">{{ post.excerpt | truncatewords: 20 }} <a href="{{ post.url }}">Read more »</a></p>
+          <p>Ditulis <span class="author">Admin</span> - <span class="published">{{ post.date | date: "%d %B %Y" }}</span></p>
         </div>
-      </article>
+      </li>
     {% endfor %}
-
+  </ul>
 
   <p style="text-align:center">
     {% include pagination.html %}
