@@ -10,9 +10,12 @@ layout: default
 {% assign posts_sorted = category_posts | sort: 'date' | reverse %}
 {% for post in posts_sorted offset: paginator.per_page limit: paginator.per_page %}
 <article class="post">
-  <div class="label-line">
-    <span class="label-info-th"></span>
-  </div>
+  {% for category in post.categories %}
+    <div class="label-line">
+<span class="label-info-th">
+<a href="/category/{{ category | slugify }}/">{{ category }}</a></span>{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+</div>
 
   {% if post.image %}
     <div class='img-thumbnail-wrap'>
