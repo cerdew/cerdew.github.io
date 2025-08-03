@@ -5,14 +5,9 @@ layout: default
 
     <div class='post-body'><h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
 
-    <span class="byline">
-      <time class="published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author author" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</span>
+    <div class='post-info info-1'>
+<span class='author-info'>By Cerdew</span> - <span class='time-info'>{{ post.date | date: "%d %B %Y" }}</span>
+        </div>
 
   
 {% if page.image %}
