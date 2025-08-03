@@ -1,24 +1,14 @@
 <aside id='sidebar-wrapper'>
-<div class='sidebar section' id='sidebar'>
-<div class='widget PopularPosts' data-version='2' id='PopularPosts1'>
-<h2 class='title'>Populer</h2>
-<div class='widget-content'>
-<div class='popular-post'>
+<h2 class='title'>Terbaru</h2>
+<ul>
 {% for post in site.posts limit:5 %}
-<div class='popular-post-thumbnail'>
-          {% if post.image %}
-<a href="{{ post.url }}"><img src="{{ post.image }}" alt="{{ post.title }}" /></a>
-          {% endif %}
-<div class='popular-post-info'>
-<div class='popular-post-title'>
-<a href="{{ post.url }}">{{ post.title }}</a>
-</div>
+<li><a href="{{ post.url }}">{{ post.title }}</a>
 <div class='byline'>{{ post.date | date: "%d %B %Y" }}</div>
+</li>
 {% endfor %}
-</div>
+</ul>
 <!-- END RECENT POST -->
 
-</div>
 </aside>
 
 
