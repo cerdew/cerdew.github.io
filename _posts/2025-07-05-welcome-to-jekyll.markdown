@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2025-07-05 00:42:59 +0700
 categories: jekyll
+image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiatZsNyz-4QbD5o6cgSsDo7T9M0VbmwRQQ3H2kcQpHazvU8LZ-Hi7AjpecSGfU-TIRHXqXQEjaFFugXFWFaCpnl6A4qLRxXSvoaLgrW-0_0fdBJ8UJYu51QSU3I3ndImRqrJGl3-z6UJ_Hu5_ppCIap8E3Z8EuxhvQ2adySKvl7GPbpB8DZtrWc9Qo_O8/s800/cerita-adik-kandung.jpg
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
