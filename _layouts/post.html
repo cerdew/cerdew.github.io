@@ -3,7 +3,14 @@ layout: default
 ---
 <article class="post hentry" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <div class='post-body'><h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class='post-body'>
+        {% if page.image %}
+<div class="separator" style="clear: both; text-align: center;">
+          <img class="fullwidth" src="{{ page.image }}" alt="Gambar {{ post.title }}" width="480" />
+</div>
+        {% endif %}
+        
+        <h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
 
     <p class="post-meta">
       <time class="published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -13,13 +20,6 @@ layout: default
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author author" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
-
-  
-{% if page.image %}
-<div class="separator" style="clear: both; text-align: center;">
-          <img class="fullwidth" src="{{ page.image }}" alt="Gambar {{ post.title }}" width="480" />
-</div>
-        {% endif %}
 
  
     {{ content }}
