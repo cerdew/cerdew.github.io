@@ -1,5 +1,8 @@
 {% if page.url == '/' %}
+<title>{{ site.title }}</title>
+<meta content="{{ site.description }}" name="description">
     <link rel="canonical" href="{{ site.url }}">
 {% else %}
     {% seo %}
 {% endif %}
+<link rel="stylesheet" href="/assets/main.css">
