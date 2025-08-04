@@ -3,7 +3,7 @@ layout: post
 title: "Kisah Seks Seorang Ob Dengan Resepsionis Cantik Yang Masih Perawan"
 date: 2025-08-04 10:24:25 +0700
 author: Bima
-categories: cerita daun muda
+categories: [cerita daun muda]
 image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV0X2gm2Efw3g9__wvUeSz22jaP0ILXgQrqNnlg7CAL4ZJLIKki4sEZDLkLLg7W8UGmL6yCXGflS0t1L7oFX-v_NcCgiUstuVrXUfh3s9GFokIOe3xGqyiaodiBaOElNVVZBK-FkwbWr4wPak_7N2rC2eH-SRyDL2PzPbW6Ge9N29CH6UE6I8d6iXYtiGk/s953/gambar-seksi-resepsionis-cantik.jpg
 description: "Sebuah kisah tentang Bima, seorang OB di sebuah perusahaan kecil, yang menjalin hubungan intim dengan Laras, resepsionis baru di kantornya."
 ---
