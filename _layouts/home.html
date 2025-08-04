@@ -11,7 +11,7 @@ layout: default
   {% for category in post.categories %}
     <div class="label-line">
 <span class="label-info-th">
-<a href="/category/{{ category | slugify }}/">{{ category }}</a></span>{% unless forloop.last %}, {% endunless %}
+<a href="https://cerdew.online/category/{{ category | slugify }}/">{{ category }}</a></span>{% unless forloop.last %}, {% endunless %}
   {% endfor %}
 </div>
 
@@ -23,14 +23,14 @@ layout: default
         <!-- Judul tetap di kanan -->
         <div class="post-content-wrapper">
                 <h2 class='post-title'>
-            <a href="https://cerdew.github.io{{ post.url }}">{{ post.title }}</a>
+            <a href="https://cerdew.online{{ post.url }}">{{ post.title }}</a>
           </h2>
         
 
         <!-- Snippet + tanggal pindah ke bawah gambar -->
         <div class="post-snippet">
           {{ post.excerpt | truncatewords: 20 }} <a href="{{ post.url }}" class="read-more-link">Read more »</a></div>
-      </article>
+        </div></article>
     {% endfor %}
 
 
