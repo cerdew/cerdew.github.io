@@ -1,0 +1,5 @@
+{% if page.url == '/' %}
+    <link rel="canonical" href="{{ site.url }}">
+{% else %}
+    {% seo %}
+{% endif %}
