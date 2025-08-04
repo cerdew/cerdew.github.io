@@ -4,24 +4,23 @@ layout: default
 <article class="post hentry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class='post-body'>
-        {% if page.image %}
+        
+        
+        <h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
+{% if page.image %}
 <div class="separator" style="clear: both; text-align: center;">
           <img class="fullwidth" src="{{ page.image }}" alt="Gambar {{ post.title }}" width="480" />
 </div>
         {% endif %}
         
-        <h1 class="post-title entry-title" itemprop="name headline">{{ page.title | escape }}</h1>
-
-    <p class="post-meta">
+    <span class="byline">
       <time class="published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author author" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-
- 
+      {%- endif -%}</span>
     {{ content }}
 </div>
   
