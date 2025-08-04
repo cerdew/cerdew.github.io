@@ -3,7 +3,7 @@ email: ""
 description: ""
 
 baseurl: "" # jangan dikasih slash
-url: "https://cerdew.online"
+url: "https://cerdew.online/"
 
 permalink: "/:title.html"
 
